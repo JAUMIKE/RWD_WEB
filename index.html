@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+        }
+        nav{
+            background-color: #333;
+        }
+        
+ 
+       
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0;
+            overflow: hidden;
+           
+        }
+
+        .navbar ul li {
+            float: left;
+        }
+        .fa-bars:before {
+            content: "\f0c9";
+            
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        main {
+            /* min-height:  calc(100% - 50px);; */
+            min-height: 100%;
+            /* margin-bottom: -50px; */
+        }
+        /*navbar 漢堡  */
+        .navbar input{
+            display: none;
+         }
+         .navbar label{
+             float: left;
+             
+         }
+         .burger{
+            text-align: center;
+             width: 30px;
+             height: 30px;
+             margin : 5px 10px 15px 10px;
+             cursor: pointer;
+             color: white;
+             border: 1px solid white;
+             border-radius: 50%;
+         }
+         /* 廣告圖 */
+        .sellInfo{
+            margin-top:10px 
+        }
+        .sellInfo img{
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* 購物車icon與 類別 */
+        .category {
+            margin: 10px 5%;
+        }
+        .btn-group{
+            border: 1px solid black;
+        }
+
+        .category div:first-child {
+            padding: 0 2%;
+            float: left;
+            width: 50%;
+        }
+
+        .category div:last-child {
+            float: right;
+        }
+
+        .category img {
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .category ul {
+
+            list-style-type: none;
+
+        }
+
+        .category li {
+
+            display: inline-block;
+            font-size: 1rem;
+            border: 1px solid black;
+            width: 3rem;
+        }
+
+
+        /* 商品陳列區 */
+        .cardshow {
+            clear: both;
+            margin: 20px 5%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cardshow div {
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+        .cardshow div img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cardshow div a {
+            display: block;
+            background-color: deepskyblue;
+            border-radius: 5%;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        .footer {
+            height: 50px;
+            text-align: center;
+            padding: 0 5%;
+            background-color: darkgrey;
+        }
+   
+        .debug{
+            margin: 0 5%;
+            font-size: 20px;
+            height: 120px;
+            line-height: 120px;
+            color: #1A3C2B;
+           
+        }
+        .debug2{
+            margin: 0 5%;
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        /* 平板大小 */
+        @media (min-width:513px)  and (max-width:768px) {
+            .category {
+                margin: 10px 5%;
+
+
+            }
+            
+            .cardshow{
+                display: block;
+            }
+
+            .cardshow div{
+                /* flex-direction:column  */
+               display: inline-block;
+               width: 49%;
+            }
+            .debug{
+            display: block;
+        }
+        }
+        /* 手機大小 */
+        @media (max-width:512px) {
+            .navbar ul{
+                display: none;
+            }
+            nav .navbar label{
+                display: block;
+            }
+           
+            #burger:checked+ul{
+                display: block;
+            }
+            
+            .cardshow{
+                flex-direction:column 
+            }
+            .category div:first-child {
+            padding: 0 2%;
+            float: left;
+            width: 70%;
+            }
+
+            .category div:last-child {
+                float: right;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="itemBar">
+                <label for="burger"><i class="fa fa-bars burger" aria-hidden="true"></i></label>
+                <input type="checkbox" id="burger" name="" id="">
+            </div>
+            <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="sellInfo">
+            <img class="sellImg" src="./image/slideImg001.jpg" alt="">
+        </div>
+        <div class="category">
+            <div class="">
+                <a class="" href="">手套</a>
+                <a class="" href="">球棒</a>
+                <a class="" href="">背包</a>
+                <!-- <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+                <!-- <span id="viewWidth"></span> -->
+            </div>
+            
+            <div>
+                <img src="./image/shoppingCart02.ico" alt="">
+            </div>
+
+        </div>
+      
+        <div class="cardshow">
+            <div>
+                <img src="./image/Baseball_glove01.jpg" alt="">
+                <p>Item Title</p>
+                <a href="#">About this item</a>
+            </div>
+            <div>
+                <img src="./image/Baseball_glove02.jpg" alt="">
+                <p>Item Title</p>
+                <a href="#">About this item</a>
+            </div>
+            <div>
+                <img src="./image/Baseball_glove03.jpg" alt="">
+                <p>Item Title</p>
+                <a href="#">About this item</a>
+            </div>
+            <div>
+                <img src="./image/Baseball_glove04.jpg" alt="">
+                <p>Item Title</p>
+                <a href="#">About this item</a>
+            </div>
+
+        </div>
+        <p class="debug">test View</p>
+        <p class="debug2">Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </main>
+    <footer class="footer">
+        <p>2021 copyright Google corporation</p>
+
+    </footer>
+    <script>
+        let sellImg = document.querySelector(".sellImg");
+        let sellImgArr = ['slideImg001.jpg','slideImg002.jpg','slideImg003.jpg']
+        
+        function changeImg(){
+            let randomNum = Math.floor(Math.random()*3);
+            let d = new Date();
+            for(let i = 0 ; i<sellImgArr.length;i++){   
+                sellImg.setAttribute('src','./image/'+sellImgArr[randomNum]);
+            }
+            // console.log(d.getSeconds());
+        }
+         setInterval(changeImg, 2000);
+        //  document.getElementById('viewWidth').innerText = '螢幕寬度: '+document.body.clientWidth+" px";
+    
+         
+    </script>
+</body>
+
+</html>
